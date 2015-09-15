@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="script2.js"></script>
+    <title>Проверка пароля</title>
+  </head>
+  <body>
+  <audio class='ea_mus' id="demo" src="audio.mp3"></audio>
+<div>
+  <button onclick="document.getElementsByTagName('audio')[0].play()">Play the Audio</button>
+  <button onclick="document.getElementsByTagName('audio')[0].pause()">Pause the Audio</button>
+  <button onclick="document.getElementById('demo').volume+=0.1">Increase Volume</button>
+  <button onclick="document.getElementById('demo').volume-=0.1">Decrease Volume</button>
+</div>
+  <div id='frame'>
+  <div id='bad_log'></div>
+  <table>
+   <tr>
+    <td align=right>Пароль:</td>
+	<td>
+	 <input type=password class='psh' id='pass1'>
+	 <input type=text class='pss' id='pass1'>
+	 <button class='shh'>Показать</button>
+	</td>
+   </tr>
+   <tr>
+    <td align=right>Подтверждение пароля:</td>
+	<td>
+	 <input type=password class='psh' id='pass2'>
+	 <input type=text class='pss' id='pass2'>
+	 <button class='shh'>Показать</button>
+	</td>
+   </tr>
+   <tr>
+    <td align=right></td>
+	<td align=right>
+	 <!--button id='go'>Проверить</button-->
+     <button id='clear'>Очистить</button>
+	</td>
+   </tr>
+  </table> 
+  <div id='bar'>
+   <div id='sb_b'>
+    <div id='status'>     
+    </div>
+   </div>	
+  </div>
+  <div id='pc_val' align=center></div>
+  <!--div id='log'>
+  </div-->
+  <div id='passstrength' align=center></div>
+  <div id='passsboth' align=center></div>
+  <span class='s_hide'>Требования к паролю</span>
+  <div class='d_hide'>
+  <ul>
+   <li>количество знаков не менее 6-ти</li>
+   <li>наличие букв в обоих регистрах</li>
+   <li>наличие цифр и спецсимволов</li>
+  </ul>
+  </div> 
+ 
+  <table cellspacing=5>
+   <tr>
+    <td class='zag' colspan='2'>Повышение сложности</td>	
+   </tr>
+   <tr>
+    <td align=right>Количество знаков</td>
+	<td align=center rel='fh' class='no' width=20 id='g_simNom'></td>
+   </tr>
+   <tr>
+    <td align=right>Заглавные буквы</td>
+	<td align=center rel='fh' class='no' id='g_bigLet'></td>
+   </tr>
+   <tr>
+    <td align=right>Строчные буквы</td>
+	<td align=center rel='fh' class='no' id='g_smallLet'></td>
+   </tr>
+   <tr>
+    <td align=right>Цифры</td>
+	<td align=center rel='fh' class='no' id='g_num'></td>
+   </tr>
+   <tr>
+    <td align=right>Символы</td>
+	<td align=center rel='fh' class='no' id='g_sim'></td>
+   </tr>
+   <tr>
+    <td align=right>Цифры или символы в середине</td>
+	<td align=center rel='fh' class='no' id='g_mid'></td>
+   </tr>
+   <tr>
+    <td align=right><small>Соответствие вышеперечисленным требованиям</small></td>
+	<td align=center rel='fh' class='no' id='g_rez'></td>
+   </tr>
+   <tr>
+    <td class='zag' colspan='2'>Понижение сложности</td>
+   </tr>
+   <tr>
+    <td align=right>Только буквы</td>
+	<td align=center rel='sh' class='yes' id='b_let'></td>
+   </tr>
+   <tr>
+    <td align=right>Только цифры</td>
+	<td align=center rel='sh' class='yes' id='b_num'></td>
+   </tr>
+   <tr>
+    <td align=right title='Идущие подряд одинаковые знаки'>Повторяющиеся знаки</td>
+	<td align=center rel='sh' class='yes' id='b_tw'></td>
+   </tr>
+   <tr>
+    <td align=right>Последовательность букв > 3</td>
+	<td align=center rel='sh' class='yes' id='b_l3'></td>
+   </tr>
+   <tr>
+    <td align=right>Последовательность цифр > 3</td>
+	<td align=center rel='sh' class='yes' id='b_n3'></td>
+   </tr>
+   <tr>
+    <td class='zag'>Всего</td>
+	<td align=center rel='st' class='zag' id='tdrez'></td>
+   </tr>
+  </table> 
+  </div>
+  </body>
+</html>
